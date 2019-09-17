@@ -34,6 +34,21 @@ mutation {
     }
   }
 }
+
+mutation completeMyTask($taskId: Int!) {
+  completeTask(id: $taskId) {
+    task {
+      id
+      desc
+      completed
+    }
+  }
+}
+
+{
+  "taskId": 8
+}
+
 Query all products (all fields) & basket with products (all fields) in one query.
 Add an other product to the basket
 When using the basket use a random checkoutID (eg: "123" or "peterBasket") to get your own basket.
