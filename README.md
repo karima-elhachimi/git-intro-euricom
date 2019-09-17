@@ -1,5 +1,5 @@
-## git intro
+# git intro
 
-# refresh of git commands and tooling. 
+## refresh of git commands and tooling. 
 
 
