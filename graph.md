@@ -78,6 +78,32 @@ fragment ProductFrag on Product {
 }
 
 
-Add an other product to the basket
+##Add an other product to the basket
+mutation {
+  addItemToBasket(
+    input: { checkoutID: "test", item: { quantity: 2, productId: 1 } }
+  ) {
+    basket {
+      checkoutID
+      items {
+        product {
+          ...ProductFrag
+        }
+      }
+    }
+  }
+}
+fragment ProductFrag on Product {
+  id
+  sku
+  title
+  desc
+  image
+  stocked
+  basePrice
+  price
+}
+
+
 When using the basket use a random checkoutID (eg: "123" or "peterBasket") to get your own basket.
 
