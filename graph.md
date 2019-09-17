@@ -25,7 +25,15 @@ fragment UserFrag on User {
 }
 
 ##Query a single user and use a variable
+
 Add and complete a task
+mutation {
+  addTask(desc: "this is a new task") {
+    task {
+      desc
+    }
+  }
+}
 Query all products (all fields) & basket with products (all fields) in one query.
 Add an other product to the basket
 When using the basket use a random checkoutID (eg: "123" or "peterBasket") to get your own basket.
