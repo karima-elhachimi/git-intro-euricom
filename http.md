@@ -46,3 +46,6 @@ cache-control: no-cache
 - Remove yourself again
 DELETE https://euri-test-api-gyitloixhh.now.sh/api/users/1568719378220
 - Get the basket with items description
+GET https://euri-test-api-gyitloixhh.now.sh/api/basket/karimasbasket
+-> productID gebruiken voor nieuwe GET request voor product info
+GET https://euri-test-api-gyitloixhh.now.sh/api/products/1
