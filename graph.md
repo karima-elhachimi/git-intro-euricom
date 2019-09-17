@@ -49,7 +49,35 @@ mutation completeMyTask($taskId: Int!) {
   "taskId": 8
 }
 
-Query all products (all fields) & basket with products (all fields) in one query.
+##Query all products (all fields) & basket with products (all fields) in one query.
+query {
+  allProducts(first: 1) {
+    product {
+      ...ProductFrag
+    }
+  }
+  basket(checkoutID: "test") {
+    items {
+      id
+      product {
+        ...ProductFrag
+      }
+    }
+  }
+}
+
+fragment ProductFrag on Product {
+  id
+  sku
+  title
+  desc
+  image
+  stocked
+  basePrice
+  price
+}
+
+
 Add an other product to the basket
 When using the basket use a random checkoutID (eg: "123" or "peterBasket") to get your own basket.
 
