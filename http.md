@@ -44,4 +44,5 @@ cache-control: no-cache
   "role": "admin"
 }
 - Remove yourself again
+DELETE https://euri-test-api-gyitloixhh.now.sh/api/users/1568719378220
 - Get the basket with items description
